@@ -31,6 +31,9 @@
 }
 
 .Item-price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 15px;
     background-color: rgb(189, 92, 235);
     color: white;
