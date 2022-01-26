@@ -13,6 +13,9 @@ function App() {
       <div className='App-body'>
         <Expenses items={expenses} />
       </div>
+      <div className='App-footer'>
+
+      </div>
     </div>
   );
 }

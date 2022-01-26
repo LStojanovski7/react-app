@@ -31,6 +31,18 @@
   font-size: calc(10px + 2vmin);
 }
 
+.App-footer {
+  /* background-color: #282c34; */
+  background-color: rgb(31, 31, 31);
+  display: flex;
+  min-height: 100px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
 .App-content {
   min-width: 60%;
   display: flex;
