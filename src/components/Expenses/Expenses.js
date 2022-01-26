@@ -1,4 +1,5 @@
 import ExpenseItem from '../ExpenseItem/ExpenseItem';
+import './Expense.css';
 
 function Expenses(props) {
 
