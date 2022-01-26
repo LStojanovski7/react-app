@@ -14,7 +14,9 @@ function App() {
         <Expenses items={expenses} />
       </div>
       <div className='App-footer'>
-
+        <div>
+          <button>Simple button</button>
+        </div>
       </div>
     </div>
   );
