@@ -4,6 +4,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import expenses from "./data";
 import Expenses from "./components/Expenses/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense";
+import ExpenseFilter from "./components/ExpenseFilter/ExpenseFilter";
 
 function App() {
   const addExpenseHandler = (expense) => {
