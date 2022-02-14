@@ -3,6 +3,8 @@ import ExpenseFilter from "../ExpenseFilter/ExpenseFilter";
 import ExpenseItem from "../ExpenseItem/ExpenseItem";
 // UI
 import Card from "../UI/Card";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import "./Expense.css";
 
