@@ -1,4 +1,4 @@
-const expenses = [
+const data = [
   {
     id: "e1",
     title: "Toilet Paper",
@@ -26,4 +26,4 @@ const expenses = [
   },
 ];
 
-export default expenses;
+export default data;

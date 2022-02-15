@@ -14,7 +14,7 @@ const NewExpense = (props) => {
 
   return (
     <div className="new-expense">
-      <ExpenseForm onSubmitExpenseData={saveExpenseDataHandler} />
+      <ExpenseForm onSubmitExpenseData={saveExpenseDataHandler} isDisabled={false} isRequired={true} />
     </div>
   );
 };
