@@ -7,6 +7,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import "./Expense.css";
+import { useEffect } from "react";
 
 function Expenses(props) {
   const filterChangeHandler = (event) => {};
