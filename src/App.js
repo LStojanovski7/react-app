@@ -5,12 +5,20 @@ import data from "./data";
 import Expenses from "./components/Expenses/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense";
 import { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.min.css";
+import { FaInfo } from "react-icons/fa";
 
 function App() {
   const [expenses, setExpenses] = useState(data);
 
   const addExpenseHandler = (expense) => {
     setExpenses((prevExpenses) => {
+      toast.success(
+        <h3>
+          <FaInfo /> New expense added
+        </h3>
+      );
       return [expense, ...prevExpenses];
     });
   };
@@ -24,6 +32,7 @@ function App() {
         <NewExpense onAddExpense={addExpenseHandler} />
         <Expenses items={expenses} />
       </div>
+      <ToastContainer position="bottom-right" autoClose={5000} hideProgressBar={false} pauseOnHover />
       <div className="App-footer"></div>
     </div>
   );

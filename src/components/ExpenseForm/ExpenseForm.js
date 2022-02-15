@@ -7,9 +7,6 @@ const ExpenseForm = (props) => {
   const min = 0.01;
   const step = 0.01;
 
-  //date
-  const minDate = "2022-01-01";
-
   //states
   const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredAmount, setEnteredAmount] = useState("");
@@ -73,7 +70,7 @@ const ExpenseForm = (props) => {
         </div>
         <div className="new-expense__controls">
           <label>Date</label>
-          <input type="date" min={minDate} value={enteredDate} onChange={dateChangeHandler} required={isRequired} disabled={isDisabled} />
+          <input type="date" value={enteredDate} onChange={dateChangeHandler} required={isRequired} disabled={isDisabled} />
         </div>
       </div>
       <div className="new-expense__actions">
