@@ -1,14 +1,18 @@
 import logo from "./logo.svg";
 import "./App.css";
 import { Routes, Route, Link } from "react-router-dom";
-import expenses from "./data";
+import data from "./data";
 import Expenses from "./components/Expenses/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense";
+import { useState } from "react";
 
 function App() {
+  const [expenses, setExpenses] = useState(data);
+
   const addExpenseHandler = (expense) => {
-    console.log("In ap.js");
-    console.log(expense);
+    setExpenses((prevExpenses) => {
+      return [expense, ...prevExpenses];
+    });
   };
 
   return (

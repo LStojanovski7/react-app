@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./ExpenseForm.css";
 
 const ExpenseForm = (props) => {
+  const { isDisabled, isRequired } = props;
   //amount
   const min = 0.01;
   const step = 0.01;
@@ -48,15 +49,31 @@ const ExpenseForm = (props) => {
       <div className="new-expense__controls">
         <div className="new-expense__controls">
           <label>Title</label>
-          <input type="text" value={enteredTitle} onChange={titleChangeHandler} placeholder="Product name" />
+          <input
+            type="text"
+            value={enteredTitle}
+            onChange={titleChangeHandler}
+            placeholder="Product name"
+            required={isRequired}
+            disabled={isDisabled}
+          />
         </div>
         <div className="new-expense__controls">
           <label>Amount</label>
-          <input type="number" min={min} step={step} value={enteredAmount} onChange={amountChangeHandler} placeholder="$20" />
+          <input
+            type="number"
+            min={min}
+            step={step}
+            value={enteredAmount}
+            onChange={amountChangeHandler}
+            placeholder="$20"
+            required={isRequired}
+            disabled={isDisabled}
+          />
         </div>
         <div className="new-expense__controls">
           <label>Date</label>
-          <input type="date" min={minDate} value={enteredDate} onChange={dateChangeHandler} />
+          <input type="date" min={minDate} value={enteredDate} onChange={dateChangeHandler} required={isRequired} disabled={isDisabled} />
         </div>
       </div>
       <div className="new-expense__actions">
